@@ -11,9 +11,12 @@
     "release": "turbo run build --filter=docs^... && changeset publish"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
     "@changesets/cli": "^2.25.2",
     "eslint": "^8.29.0",
     "eslint-config-acme": "workspace:0.0.0",
+    "husky": "^8.0.3",
     "prettier": "^2.8.0",
     "turbo": "latest"
   },
