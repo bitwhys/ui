@@ -1,0 +1,35 @@
+{
+  "name": "@acme/docs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc",
+    "cache-clear": "contentlayer build --verbose --clearCache",
+    "build:content": "contentlayer dev"
+  },
+  "dependencies": {
+    "@acme/core": "workspace:*",
+    "@radix-ui/colors": "^1.0.0",
+    "@vanilla-extract/css": "^1.12.0",
+    "@vanilla-extract/next-plugin": "^2.1.3",
+    "contentlayer": "^0.3.4",
+    "glob": "^7.2.0",
+    "lodash": "^4.17.21",
+    "next": "^12.3.4",
+    "next-contentlayer": "0.3.4",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-live": "^4.1.3"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.195",
+    "@types/react": "^18.2.14",
+    "react-docgen-typescript": "^2.2.2",
+    "typescript": "5.1.6"
+  }
+}
