@@ -1,6 +1,6 @@
 import CodeBlock from './CodeBlock'
 import PropsTable from './PropsTable'
-import { Stack } from '@acme/core'
+import { Stack } from '@bitwhys/ui'
 
 export const components = {
   code: (props: any) => <CodeBlock {...props} />,

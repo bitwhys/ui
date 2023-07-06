@@ -1,4 +1,4 @@
-import { Button, Stack } from '@acme/core'
+import { Button, Stack } from '@bitwhys/ui'
 import PageTitle from 'src/components/PageTitle'
 
 const Home = () => {

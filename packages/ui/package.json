@@ -1,5 +1,5 @@
 {
-  "name": "@acme/core",
+  "name": "@bitwhys/ui",
   "version": "0.0.1",
   "description": "Example Component Library",
   "main": "dist/index.js",

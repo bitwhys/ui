@@ -2,7 +2,7 @@ import './App.css'
 import '@fontsource/irish-grover'
 import '@fontsource/fira-mono'
 import '@fontsource/rajdhani/700.css'
-import { Button } from '@acme/core'
+import { Button } from '@bitwhys/ui'
 
 const TaskList = () => (
   <div

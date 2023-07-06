@@ -42,9 +42,9 @@ Using Turborepo simplifies managing your design system monorepo, as you can have
 This Turborepo includes the following packages and applications:
 
 - `apps/docs`: Component documentation site with Storybook
-- `packages/@acme/core`: Core React components
-- `packages/@acme/utils`: Shared React utilities
-- `packages/@acme/tsconfig`: Shared `tsconfig.json`s used throughout the Turborepo
+- `packages/ui`: Core React components
+- `packages/utils`: Shared React utilities
+- `packages/tsconfig`: Shared `tsconfig.json`s used throughout the Turborepo
 - `packages/eslint-config-acme`: ESLint preset
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/). Workspaces enables us to "hoist" dependencies that are shared between packages to the root `package.json`. This means smaller `node_modules` folders and a better local dev experience. To install a dependency for the entire monorepo, use the `-w` workspaces flag with `pnpm add`.
@@ -67,7 +67,7 @@ tsup src/index.tsx --format esm,cjs --dts --external react
 
 ```json:acme-core/package.json
 {
-  "name": "@acme/core",
+  "name": "@bitwhys/ui",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -79,7 +79,7 @@ tsup src/index.tsx --format esm,cjs --dts --external react
 Run `pnpm build` to confirm compilation is working correctly. You should see a folder `acme-core/dist` which contains the compiled output.
 
 ```bash
-acme-core
+ui
 └── dist
     ├── index.d.ts  <-- Types
     ├── index.js    <-- CommonJS version
@@ -118,13 +118,13 @@ Storybook provides us with an interactive UI playground for our components. This
 
 - Use Vite to bundle stories instantly (in milliseconds)
 - Automatically find any stories inside the `stories/` folder
-- Support using module path aliases like `@acme-core` for imports
+- Support using module path aliases like `@bitwhys-core` for imports
 - Write MDX for component documentation pages
 
 For example, here's the included Story for our `Button` component:
 
 ```js:apps/docs/stories/button.stories.mdx
-import { Button } from '@acme-core/src';
+import { Button } from '@bitwhys-core/src';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 
 <Meta title="Components/Button" component={Button} />

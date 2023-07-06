@@ -1,26 +1,10 @@
-import { resolve } from 'node:path'
 import { defineDocumentType, makeSource, ComputedFields } from 'contentlayer/source-files'
 import { rehypeMetaAttribute } from './src/lib/rehype-meta-attribute'
 import { getTypes } from './src/utils/getTypes'
 import { getComponentName, getComponentPaths, getDocName, getDocPaths } from './src/utils/fs'
 import { createGitHubLink } from './src/utils/github'
 
-import path from 'path'
-import { fileURLToPath } from 'url'
-
-const __filename = fileURLToPath(import.meta.url)
-
-// 👇️ "/home/john/Desktop/javascript"
-const __dirname = path.dirname(__filename)
-
-const projectRoot = resolve(__dirname, '..', '..')
-const componentPackageSourceRoot = resolve(projectRoot, 'packages', 'acme-core', 'src')
-const docsPackageSourceRoot = resolve(projectRoot, 'apps', 'docs', 'src')
-const docMarkdownContentPath = resolve(docsPackageSourceRoot, 'content')
-
-console.log(`$[DEBUG - CONTENT LAYER] | dir: {${__dirname}`)
 const getSlug = (sourceFileName: string) => {
-  console.log(sourceFileName)
   return sourceFileName.replace(/\.mdx$/, '').replace(/\.docs$/, '')
 }
 const getPathName = (slug: string) => getComponentPaths().find(x => getComponentName(x) === slug) as string
@@ -60,7 +44,7 @@ const computedFields: ComputedFields = {
 
 export const Component = defineDocumentType(() => ({
   name: 'Component',
-  filePathPattern: `packages/acme-core/src/components/**/*.docs.mdx`,
+  filePathPattern: `packages/ui/src/components/**/*.docs.mdx`,
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
@@ -96,7 +80,7 @@ export const Doc = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: '../../',
-  contentDirInclude: ['apps/docs/src/content', 'packages/acme-core/src/components'],
+  contentDirInclude: ['apps/docs/src/content', 'packages/ui/src/components'],
   documentTypes: [Component, Doc],
   mdx: {
     rehypePlugins: [rehypeMetaAttribute],

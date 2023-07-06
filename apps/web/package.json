@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@acme/core": "workspace:*",
+    "@bitwhys/ui": "workspace:*",
     "@fontsource/fira-mono": "^5.0.4",
     "@fontsource/irish-grover": "^5.0.4",
     "@fontsource/rajdhani": "^5.0.4",

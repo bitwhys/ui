@@ -1,5 +1,5 @@
 {
-  "name": "@acme/stories",
+  "name": "@bitwhys/stories",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,7 +11,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "dependencies": {
-    "@acme/core": "workspace:*",
+    "@bitwhys/ui": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

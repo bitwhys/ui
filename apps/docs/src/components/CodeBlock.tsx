@@ -1,6 +1,6 @@
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import * as styles from './CodeBlock.css'
-import { Button, Heading, Stack } from '@acme/core'
+import { Button, Heading, Stack } from '@bitwhys/ui'
 
 const scope = { Button, Heading, Stack }
 

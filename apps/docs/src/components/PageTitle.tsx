@@ -1,4 +1,4 @@
-import { Stack } from '@acme/core'
+import { Stack } from '@bitwhys/ui'
 import { vars } from 'src/styles/vars.css'
 import * as styles from './PageTitle.css'
 

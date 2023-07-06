@@ -4,7 +4,7 @@ import path from 'path'
 
 export const getComponentPaths = () => {
   console.log(`[DEBUG --- APPS/DOCS] | cwd: ${process.cwd()}`)
-  const paths = glob.sync('../../packages/acme-core/src/components/**/*.mdx', {
+  const paths = glob.sync('../../packages/ui/src/components/**/*.mdx', {
     cwd: process.cwd(),
     absolute: true,
   })
