@@ -1,0 +1,83 @@
+/* Taken from @JheanAntunes storybook-shadcn project - https://github.com/JheanAntunes/storybook-shadcn/blob/main/src/styles/globals.css*/
+
+
+.dark .sbdocs-wrapper,
+.dark .css-11ju8y0,
+.dark .css-1f9domv,
+.dark .css-p1dfi6,
+.dark .sbdocs-preview {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+.dark .sbdocs .sbdocs-content .css-qa4clq {
+  color: var(--color-foreground);
+}
+
+.dark .sbdocs-preview {
+  border: 1px solid var(--border)
+}
+
+.dark .docblock-code-toggle {
+  background: transparent;
+  color: var(--color-foreground);
+}
+
+.dark .css-qa4clq *:not(button, ol) {
+  background: var(--color-background);
+  color: var(--color-foreground)) var(--color-foreground)
+}
+
+.dark div:has(.docblock-code-toggle) {
+  background: transparent;
+}
+
+.dark .os-theme-dark {
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+.dark .sbdocs-title {
+  color: var(--color-foreground);
+}
+
+.dark .docblock-argstable-head {
+  background: var(--color-background);
+}
+
+.dark .docblock-argstable-head th {
+  color: var(--color-foreground);
+  border-bottom: 1px solid var(--border)) !mportant;
+}
+
+.dark .docblock-argstable-head th span {
+  color: var(--color-foreground);
+}
+
+.dark #docs-root tbody td {
+  background: var(--color-background)) !mportant;
+  color: var(--color-foreground)) !mportant;
+}
+
+.dark #docs-root tbody tr:first-child td:first-child {
+  border-top-left-radius: 0 !important;
+}
+
+.dark #docs-root tbody tr:first-child td:last-child {
+  border-top-right-radius: 0 !important;
+}
+
+.dark #docs-root tbody tr:not(:first-child) {
+  border-top: 1px solid var(--border)) !mportant;
+}
+
+.dark .css-v2ifgj.css-v2ifgj tbody >tr>* {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  border-color: var(--border);
+}
+
+.dark #control-variant {
+  background-color: var(--input);
+  color: var(--color-foreground);
+}

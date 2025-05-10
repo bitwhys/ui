@@ -18,9 +18,9 @@ const styles = {
     '*:data-[slot=icon]:-mx-0.5 *:data-[slot=icon]:my-0.5 *:data-[slot=icon]:size-5 *:data-[slot=icon]:shrink-0 *:data-[slot=icon]:self-center *:data-[slot=icon]:text-(--btn-icon) sm:*:data-[slot=icon]:my-1 sm:*:data-[slot=icon]:size-4 forced-colors:[--btn-icon:ButtonText] forced-colors:data-hover:[--btn-icon:ButtonText]',
   ],
   solid: [
-    // Optical border, implemented as the button background to avoid corner artifacts
+    // Optical border, implemented as the Button background to avoid corner artifacts
     'border-transparent bg-(--btn-border)',
-    // Dark mode: border is rendered on `after` so background is set to button background
+    // Dark mode: border is rendered on `after` so background is set to Button background
     'dark:bg-(--btn-bg)',
     // Button background, implemented as foreground layer to stack on top of pseudo-border layer
     'before:absolute before:inset-0 before:-z-10 before:rounded-[calc(var(--radius-lg)-1px)] before:bg-(--btn-bg)',
@@ -30,13 +30,13 @@ const styles = {
     'dark:before:hidden',
     // Dark mode: Subtle white outline is applied using a border
     'dark:border-white/5',
-    // Shim/overlay, inset to match button foreground and used for hover state + highlight shadow
+    // Shim/overlay, inset to match Button foreground and used for hover state + highlight shadow
     'after:absolute after:inset-0 after:-z-10 after:rounded-[calc(var(--radius-lg)-1px)]',
     // Inner highlight shadow
     'after:shadow-[shadow:inset_0_1px_--theme(--color-white/15%)]',
     // White overlay on hover
     'data-active:after:bg-(--btn-hover-overlay) data-hover:after:bg-(--btn-hover-overlay)',
-    // Dark mode: `after` layer expands to cover entire button
+    // Dark mode: `after` layer expands to cover entire Button
     'dark:after:-inset-px dark:after:rounded-lg',
     // Disabled
     'data-disabled:before:shadow-none data-disabled:after:shadow-none',
