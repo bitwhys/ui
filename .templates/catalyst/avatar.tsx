@@ -1,6 +1,7 @@
+import React, { forwardRef } from 'react'
 import * as Headless from '@headlessui/react'
 import clsx from 'clsx'
-import React, { forwardRef } from 'react'
+
 import { TouchTarget } from './button'
 import { Link } from './link'
 
@@ -30,17 +31,26 @@ export function Avatar({
         'inline-grid shrink-0 align-middle [--avatar-radius:20%] *:col-start-1 *:row-start-1',
         'outline -outline-offset-1 outline-black/10 dark:outline-white/10',
         // Border radius
-        square ? 'rounded-(--avatar-radius) *:rounded-(--avatar-radius)' : 'rounded-full *:rounded-full'
+        square
+          ? 'rounded-(--avatar-radius) *:rounded-(--avatar-radius)'
+          : 'rounded-full *:rounded-full',
       )}
     >
       {initials && (
         <svg
-          className="size-full fill-current p-[5%] text-[48px] font-medium uppercase select-none"
+          className="size-full select-none fill-current p-[5%] text-[48px] font-medium uppercase"
           viewBox="0 0 100 100"
           aria-hidden={alt ? undefined : 'true'}
         >
           {alt && <title>{alt}</title>}
-          <text x="50%" y="50%" alignmentBaseline="middle" dominantBaseline="middle" textAnchor="middle" dy=".125em">
+          <text
+            x="50%"
+            y="50%"
+            alignmentBaseline="middle"
+            dominantBaseline="middle"
+            textAnchor="middle"
+            dy=".125em"
+          >
             {initials}
           </text>
         </svg>
@@ -59,13 +69,16 @@ export const AvatarButton = forwardRef(function AvatarButton(
     className,
     ...props
   }: AvatarProps &
-    (Omit<Headless.ButtonProps, 'as' | 'className'> | Omit<React.ComponentPropsWithoutRef<typeof Link>, 'className'>),
-  ref: React.ForwardedRef<HTMLElement>
+    (
+      | Omit<Headless.ButtonProps, 'as' | 'className'>
+      | Omit<React.ComponentPropsWithoutRef<typeof Link>, 'className'>
+    ),
+  ref: React.ForwardedRef<HTMLElement>,
 ) {
   let classes = clsx(
     className,
     square ? 'rounded-[20%]' : 'rounded-full',
-    'relative inline-grid focus:not-data-focus:outline-hidden data-focus:outline-2 data-focus:outline-offset-2 data-focus:outline-blue-500'
+    'relative inline-grid focus:not-data-focus:outline-hidden data-focus:outline-2 data-focus:outline-offset-2 data-focus:outline-blue-500',
   )
 
   return 'href' in props ? (

@@ -1,6 +1,6 @@
+import type React from 'react'
 import * as Headless from '@headlessui/react'
 import clsx from 'clsx'
-import type React from 'react'
 
 export function SwitchGroup({ className, ...props }: React.ComponentPropsWithoutRef<'div'>) {
   return (
@@ -10,9 +10,9 @@ export function SwitchGroup({ className, ...props }: React.ComponentPropsWithout
       className={clsx(
         className,
         // Basic groups
-        'space-y-3 **:data-[slot=label]:font-normal',
+        '**:data-[slot=label]:font-normal space-y-3',
         // With descriptions
-        'has-data-[slot=description]:space-y-6 has-data-[slot=description]:**:data-[slot=label]:font-medium'
+        'has-data-[slot=description]:space-y-6 has-data-[slot=description]:**:data-[slot=label]:font-medium',
       )}
     />
   )
@@ -37,7 +37,7 @@ export function SwitchField({
         // Description layout
         '*:data-[slot=description]:col-start-1 *:data-[slot=description]:row-start-2',
         // With description
-        'has-data-[slot=description]:**:data-[slot=label]:font-medium'
+        'has-data-[slot=description]:**:data-[slot=label]:font-medium',
       )}
     />
   )
@@ -153,11 +153,11 @@ export function Switch({
         // Base styles
         'group relative isolate inline-flex h-6 w-10 cursor-default rounded-full p-[3px] sm:h-5 sm:w-8',
         // Transitions
-        'transition duration-0 ease-in-out data-changing:duration-200',
+        'data-changing:duration-200 transition duration-0 ease-in-out',
         // Outline and background color in forced-colors mode so switch is still visible
         'forced-colors:outline forced-colors:[--switch-bg:Highlight] dark:forced-colors:[--switch-bg:Highlight]',
         // Unchecked
-        'bg-zinc-200 ring-1 ring-black/5 ring-inset dark:bg-white/5 dark:ring-white/15',
+        'bg-zinc-200 ring-1 ring-inset ring-black/5 dark:bg-white/5 dark:ring-white/15',
         // Checked
         'data-checked:bg-(--switch-bg) data-checked:ring-(--switch-bg-ring) dark:data-checked:bg-(--switch-bg) dark:data-checked:ring-(--switch-bg-ring)',
         // Focus
@@ -169,7 +169,7 @@ export function Switch({
         'data-disabled:bg-zinc-200 data-disabled:opacity-50 data-disabled:data-checked:bg-zinc-200 data-disabled:data-checked:ring-black/5',
         'dark:data-disabled:bg-white/15 dark:data-disabled:data-checked:bg-white/15 dark:data-disabled:data-checked:ring-white/15',
         // Color specific styles
-        colors[color]
+        colors[color],
       )}
     >
       <span
@@ -187,7 +187,7 @@ export function Switch({
           'group-data-checked:bg-(--switch) group-data-checked:shadow-(--switch-shadow) group-data-checked:ring-(--switch-ring)',
           'group-data-checked:translate-x-4 sm:group-data-checked:translate-x-3',
           // Disabled
-          'group-data-checked:group-data-disabled:bg-white group-data-checked:group-data-disabled:shadow-sm group-data-checked:group-data-disabled:ring-black/5'
+          'group-data-checked:group-data-disabled:bg-white group-data-checked:group-data-disabled:shadow-sm group-data-checked:group-data-disabled:ring-black/5',
         )}
       />
     </Headless.Switch>

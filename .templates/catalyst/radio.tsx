@@ -12,9 +12,9 @@ export function RadioGroup({
       className={clsx(
         className,
         // Basic groups
-        'space-y-3 **:data-[slot=label]:font-normal',
+        '**:data-[slot=label]:font-normal space-y-3',
         // With descriptions
-        'has-data-[slot=description]:space-y-6 has-data-[slot=description]:**:data-[slot=label]:font-medium'
+        'has-data-[slot=description]:space-y-6 has-data-[slot=description]:**:data-[slot=label]:font-medium',
       )}
     />
   )
@@ -33,13 +33,13 @@ export function RadioField({
         // Base layout
         'grid grid-cols-[1.125rem_1fr] gap-x-4 gap-y-1 sm:grid-cols-[1rem_1fr]',
         // Control layout
-        '*:data-[slot=control]:col-start-1 *:data-[slot=control]:row-start-1 *:data-[slot=control]:mt-0.75 sm:*:data-[slot=control]:mt-1',
+        '*:data-[slot=control]:mt-0.75 *:data-[slot=control]:col-start-1 *:data-[slot=control]:row-start-1 sm:*:data-[slot=control]:mt-1',
         // Label layout
         '*:data-[slot=label]:col-start-2 *:data-[slot=label]:row-start-1',
         // Description layout
         '*:data-[slot=description]:col-start-2 *:data-[slot=description]:row-start-2',
         // With description
-        'has-data-[slot=description]:**:data-[slot=label]:font-medium'
+        'has-data-[slot=description]:**:data-[slot=label]:font-medium',
       )}
     />
   )
@@ -121,19 +121,22 @@ export function Radio({
   color = 'dark/zinc',
   className,
   ...props
-}: { color?: Color; className?: string } & Omit<Headless.RadioProps, 'as' | 'className' | 'children'>) {
+}: { color?: Color; className?: string } & Omit<
+  Headless.RadioProps,
+  'as' | 'className' | 'children'
+>) {
   return (
     <Headless.Radio
       data-slot="control"
       {...props}
-      className={clsx(className, 'group inline-flex focus:outline-hidden')}
+      className={clsx(className, 'focus:outline-hidden group inline-flex')}
     >
       <span className={clsx([base, colors[color]])}>
         <span
           className={clsx(
-            'size-full rounded-full border-[4.5px] border-transparent bg-(--radio-indicator) bg-clip-padding',
+            'bg-(--radio-indicator) size-full rounded-full border-[4.5px] border-transparent bg-clip-padding',
             // Forced colors mode
-            'forced-colors:border-[Canvas] forced-colors:group-data-checked:border-[Highlight]'
+            'forced-colors:group-data-checked:border-[Highlight] forced-colors:border-[Canvas]',
           )}
         />
       </span>
