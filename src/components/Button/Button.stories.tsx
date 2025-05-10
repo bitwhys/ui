@@ -16,14 +16,39 @@ const meta: Meta<typeof Button> = {
     layout: 'centered',
   },
   args: {
-    children: 'Continue to installation',
+    children: 'Button',
   },
 }
 
 export default meta
 type Story = StoryObj<typeof Button>
 
-export const Primary: Story = {
+export const Default: Story = {
+  args: {
+    // variant: 'primary',
+    children: 'Default',
+  },
+}
+
+export const Small: Story = {
+  args: {
+    // variant: 'primary',
+    // children: 'Primary',
+  },
+}
+export const Large: Story = {
+  args: {
+    // variant: 'primary',
+    // children: 'Primary',
+  },
+}
+export const WithLeadingIcon: Story = {
+  args: {
+    // variant: 'primary',
+    // children: 'Primary',
+  },
+}
+export const WithTrailingIcon: Story = {
   args: {
     // variant: 'primary',
     // children: 'Primary',
