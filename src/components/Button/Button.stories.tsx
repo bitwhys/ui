@@ -1,5 +1,6 @@
 // import { cx } from '@/utils/cx'
 import type { Meta, StoryObj } from '@storybook/react'
+import { fn } from '@storybook/test'
 
 import { Button } from './button'
 
