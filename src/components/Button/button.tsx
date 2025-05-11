@@ -12,8 +12,8 @@ const baseButton = tv({
     'gap-x-(--control-gap) relative isolate inline-flex select-none items-baseline justify-center',
     'rounded-[10px] border text-base/6 font-medium',
     // Sizing
-    'h-(--control-size) leading-(--control-lineHeight) px-[calc(var(--control-paddingInline)-1px)]',
-    'py-[calc(var(--control-paddingBlock)-1px)]',
+    'h-(--control-size) leading-(--control-line-height) px-[calc(var(--control-inline-padding)-1px)]',
+    'py-[calc(var(--control-block-padding)-1px)]',
     // Focus
     'focus:not-data-focus:outline-hidden data-focus:outline-2 data-focus:outline-offset-2',
     'data-focus:outline-blue-500',
@@ -29,11 +29,11 @@ const baseButton = tv({
   ],
   variants: {
     size: {
-      xs: 'px-[calc(var(--control-paddingInline)-1px)] py-[calc(var(--control-paddingBlock)-1px)]',
-      sm: 'px-[calc(var(--control-paddingInline)-1px)] py-[calc(var(--control-paddingBlock)-1px)]',
-      md: 'px-[calc(var(--control-paddingInline)-1px)] py-[calc(var(--control-paddingBlock)-1px)]',
-      lg: 'px-[calc(var(--control-paddingInline)-1px)] py-[calc(var(--control-paddingBlock)-1px)]',
-      xl: 'px-[calc(var(--control-paddingInline)-1px)] py-[calc(var(--control-paddingBlock)-1px)]',
+      xs: 'text-sm/6',
+      sm: 'text-sm/6',
+      md: '',
+      lg: '',
+      xl: '',
     },
   },
   defaultVariants: {

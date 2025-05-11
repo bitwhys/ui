@@ -1,99 +1,30 @@
 /*
  * Control Spacing System
- * A unified approach to component density and sizing
+ * A straightforward approach to component density and sizing
  *
  * This system provides a two-dimensional approach to control spacing:
  * 1. Size dimension (xs, sm, md, lg, xl) - sets base component size
  * 2. Density dimension (condensed, normal, spacious) - adjusts spacing within size
  */
 
-:root {
-  /* Base control sizes - --spacing(<number>) == calc(0.25rem * <number>) */
-  --control-base-xs: 0.5rem;   /* reference-value: 0.5rem */
-  --control-base-sm: 0.75rem;  /* reference-value: 0.75rem */
-  --control-base-md: 0.75rem;  /* reference-value: 0.75rem */
-  --control-base-lg: 0.75rem;  /* reference-value: 0.75rem */
-  --control-base-xl: 0.75rem;  /* reference-value: 0.75rem */
-
-  /* Density factors - proportional adjustments */
-  --density-condensed: 0.5;   /* Creates tighter spacing */
-  --density-normal: 1;        /* Reference point (1x) */
-  --density-spacious: 1.33;   /* Creates more generous spacing */
-
-  /* Block padding ratios (block-to-inline ratio for each size) */
-  --block-ratio-xs: 0.25;     /* 0.125/0.5 = 0.25 */
-  --block-ratio-sm: 0.33;     /* 0.25/0.75 ≈ 0.33 */
-  --block-ratio-md: 0.5;      /* 0.375/0.75 = 0.5 */
-  --block-ratio-lg: 0.83;     /* 0.625/0.75 ≈ 0.83 */
-  --block-ratio-xl: 1.17;     /* 0.875/0.75 ≈ 1.17 */
-
-  /* Line height ratios (for consistent vertical rhythm) */
-  --line-ratio-xs: 3;         /* 1.5/0.5 = 3 */
-  --line-ratio-sm: 2.33;      /* 1.75/0.75 ≈ 2.33 */
-  --line-ratio-md: 2.67;      /* 2/0.75 ≈ 2.67 */
-  --line-ratio-lg: 3.33;      /* 2.5/0.75 ≈ 3.33 */
-  --line-ratio-xl: 4;         /* 3/0.75 = 4 */
-}
-
-/* Default control settings */
+/* Default values - will be used when no specific combination matches */
 [data-control-size][data-density] {
-  /* Set defaults */
-  --control-size: var(--control-base-md);
-  --density-factor: var(--density-normal);
-  --block-ratio: var(--block-ratio-md);
-  --line-ratio: var(--line-ratio-md);
-
-  /* Calculate derived properties */
-  --control-paddingInline: calc(var(--control-size) * var(--density-factor));
-  --control-paddingBlock: calc(var(--control-paddingInline) * var(--block-ratio));
-  --control-lineHeight: calc(var(--control-size) * var(--line-ratio));
+  /* Sensible defaults */
+  --control-gap: 0.5rem;
+  --control-line-height: 1.25rem;
+  --control-block-padding: 0.375rem;
+  --control-inline-padding: 0.75rem;
+  --control-size: 2rem;
 }
 
-/* Size variations */
-[data-control-size="xs"] {
-  --control-size: var(--control-base-xs);
-  --block-ratio: var(--block-ratio-xs);
-  --line-ratio: var(--line-ratio-xs);
+[data-control-size='xs'], [data-control-size='sm'] {
   --control-gap: 0.25rem;
 }
-[data-control-size="sm"] {
-  --control-size: var(--control-base-sm);
-  --block-ratio: var(--block-ratio-sm);
-  --line-ratio: var(--line-ratio-sm);
-  --control-gap: 0.25rem;
-}
-[data-control-size="md"] {
-  --control-size: var(--control-base-md);
-  --block-ratio: var(--block-ratio-md);
-  --line-ratio: var(--line-ratio-md);
-  --control-gap: 0.5rem;
-}
-[data-control-size="lg"] {
-  --control-size: var(--control-base-lg);
-  --block-ratio: var(--block-ratio-lg);
-  --line-ratio: var(--line-ratio-lg);
-  --control-gap: 0.5rem;
-}
-[data-control-size="xl"] {
-  --control-size: var(--control-base-xl);
-  --block-ratio: var(--block-ratio-xl);
-  --line-ratio: var(--line-ratio-xl);
-  --control-gap: 0.5rem;
+
+[data-density='normal'] [data-control-size='xs'] {
+  --control-inline-padding: 0.5rem;
 }
 
-/* Density variations */
-[data-density="condensed"] { --density-factor: var(--density-condensed); }
-[data-density="normal"] { --density-factor: var(--density-normal); }
-[data-density="spacious"] { --density-factor: var(--density-spacious); }
-
-/*
- * For browser compatibility (Edge/Safari), you can also generate flattened variables:
- * This helps avoid nested calc() functions which can cause issues in some browsers.
- */
-[data-control-size][data-density] {
-  /* Flattened variables for better compatibility */
-  --control-xs-condensed-inline: calc(var(--control-base-xs) * var(--density-condensed));
-  --control-xs-normal-inline: calc(var(--control-base-xs) * var(--density-normal));
-  --control-xs-spacious-inline: calc(var(--control-base-xs) * var(--density-spacious));
-  /* ... and so on for other combinations */
+[data-density='spacious'] [data-control-size='md'], [data-density='spacious'] [data-control-size='lg'], [data-density='spacious'] [data-control-size='xl'] {
+  --control-inline-padding: 1rem;
 }

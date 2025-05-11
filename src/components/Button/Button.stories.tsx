@@ -51,11 +51,18 @@ export const Disabled: Story = {
     children: 'Default',
   },
 }
-
+export const ExtraSmall: Story = {
+  args: {
+    // variant: 'primary',
+    // children: 'Primary',
+    size: 'xs',
+  },
+}
 export const Small: Story = {
   args: {
     // variant: 'primary',
     // children: 'Primary',
+    size: 'sm',
   },
 }
 export const Large: Story = {
