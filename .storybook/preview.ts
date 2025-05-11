@@ -1,7 +1,7 @@
 import type { Preview } from '@storybook/react'
 
 import '../src/styles.css'
-import './dark-mode.css'
+import './globals.css'
 
 import { withThemes } from './decorators/with-themes'
 

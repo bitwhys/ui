@@ -1,0 +1,7 @@
+body {
+  background-color: var(--color-page);
+}
+
+* {
+  border-color: var(--color-brd-line);
+}

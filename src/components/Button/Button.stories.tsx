@@ -28,6 +28,7 @@ export const Default: Story = {
   args: {
     // variant: 'primary',
     children: 'Default',
+    onClick: fn(),
   },
 }
 
@@ -49,8 +50,9 @@ export const WithLeadingIcon: Story = {
     // children: 'Primary',
   },
 }
-export const WithTrailingIcon: Story = {
+export const isLoading: Story = {
   args: {
+    isLoading: true,
     // variant: 'primary',
     // children: 'Primary',
   },

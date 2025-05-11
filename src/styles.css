@@ -1,5 +1,90 @@
 @import "tailwindcss";
+@import "./css/colors.css";
+@import "./css/tokens.css";
+@import "./css/radix-theme.css";
 
 @plugin "@tailwindcss/forms";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme for color tokens */
+@theme inline {
+
+  /** Base Tokens **/
+  --color-cnt-primary: var(--color-gray-12);
+  --color-cnt-secondary: var(--color-gray-11);
+  --color-cnt-tertiary: var(--color-gray-10);
+  --color-cnt-on-inverse: var(--color-white-a12);
+
+  --color-cnt-brand: var(--color-brand-11);
+  --color-cnt-brand-bold: var(--color-brand-9);;
+
+  --color-cnt-accent: var(var(--color-accent-11),var(--color-brand-11));
+  --color-cnt-accent-bold: var(var(--color-accent-9), var(--color-brand-9));
+
+  --color-cnt-info: var(var(--color-info-11),var(--color-accent-11));
+  --color-cnt-info-bold: var(var(--color-info-9), var(--color-accent-9));
+
+  --color-cnt-warning: var(var(--color-warning-11),var(--color-accent-11));
+  --color-cnt-warning-bold: var(var(--color-warning-9), var(--color-accent-9));
+
+  --color-cnt-success: var(var(--color-success-11),var(--color-green-11),var(--color-emerald-700));
+  --color-cnt-success-bold: var(var(--color-success-9), var(--color-green-9), var(--color-emerald-500));
+
+  --color-cnt-danger: var(var(--color-danger-11),var(--color-accent-11));
+  --color-cnt-danger-bold: var(var(--color-danger-9), var(--color-accent-9));
+
+  /* Backgrounds */
+  --color-main: oklch(1 0 0);
+  --color-inverse: var(--color-black-a12) /* white */;
+  --color-secondary: var(--color-gray-3);
+  --color-tertiary: var(--color-gray-4);
+
+  --color-brand-soft: var(--color-brand-3);
+  --color-accent-soft: var(--color-accent-3);
+  --color-info-soft: var(--color-info-3);
+  --color-success-soft: var(--color-success-3);
+  --color-warning-soft: var(--color-warning-3);
+  --color-danger-soft: var(--color-danger-3);
+
+  --color-brand-bold: var(--color-brand-9);
+  --color-accent-bold: var(--color-accent-9);
+  --color-info-bold: var(--color-info-9);
+  --color-success-bold: var(--color-success-9);
+  --color-warning-bold: var(--color-warning-9);
+  --color-danger-bold: var(--color-danger-9);
+
+  /* Borders */
+  --color-brd-line: #dcdcdc;
+  --color-brd-interactive: #dcdcdc;
+  --color-brd-ring: #c6c6c6;
+
+  --color-brd-brand-line: var(--color-brand-6);
+  --color-brd-brand-interactive: var(--color-brand-7);
+  --color-brd-brand-ring: var(--color-brand-8);
+
+  --color-brd-accent-line: var(var(--color-accent-6), var(--color-brand-6));
+  --color-brd-accent-interactive: var(var(--color-accent-7), var(--color-brand-7));
+  --color-brd-accent-ring: var(var(--color-accent-8), var(--color-brand-8));
+
+  --color-brd-info-line: var(var(--color-info-6), var(--color-blue-500));
+  --color-brd-info-interactive: var(var(--color-info-7), var(--color-blue-500));
+  --color-brd-info-ring: var(var(--color-info-8), var(--color-blue-500));
+
+  --color-brd-success-line: var(var(--color-success-6), var(--color-emerald-500));
+  --color-brd-success-interactive: var(var(--color-success-7), var(--color-emerald-500));
+  --color-brd-success-ring: var(var(--color-success-8), var(--color-emerald-500));
+
+  --color-brd-warning-line: var(var(--color-warning-6), var(--color-yellow-500));
+  --color-brd-warning-interactive: var(var(--color-warning-7), var(--color-yellow-500));
+  --color-brd-warning-ring: var(var(--color-warning-8), var(--color-yellow-500));
+
+  --color-brd-danger-line: var(var(--color-danger-6), var(--color-red-500));
+  --color-brd-danger-interactive: var(var(--color-danger-7), var(--color-red-500));
+  --color-brd-danger-ring: var(var(--color-danger-8), var(--color-red-500));
+
+  /* Page Backgrounds */
+  --page: oklch(1 0 0);
+  --page-secondary: var(--color-gray-1);
+  --page-tertiary: var(--color-gray-2);
+}
