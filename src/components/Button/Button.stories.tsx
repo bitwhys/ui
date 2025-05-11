@@ -1,4 +1,5 @@
 // import { cx } from '@/utils/cx'
+import { RocketShip } from '@/icons/rocket-ship.tsx'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 
@@ -18,6 +19,7 @@ const meta: Meta<typeof Button> = {
   },
   args: {
     children: 'Button',
+    onClick: fn(),
   },
 }
 
@@ -28,7 +30,25 @@ export const Default: Story = {
   args: {
     // variant: 'primary',
     children: 'Default',
-    onClick: fn(),
+  },
+}
+
+export const Primary: Story = {
+  args: {
+    // variant: 'primary',
+    children: 'Default',
+  },
+}
+export const Ghost: Story = {
+  args: {
+    // variant: 'primary',
+    children: 'Default',
+  },
+}
+export const Disabled: Story = {
+  args: {
+    // variant: 'primary',
+    children: 'Default',
   },
 }
 
@@ -45,10 +65,13 @@ export const Large: Story = {
   },
 }
 export const WithLeadingIcon: Story = {
-  args: {
-    // variant: 'primary',
-    // children: 'Primary',
-  },
+  args: {},
+  render: (args) => (
+    <Button {...args}>
+      <RocketShip />
+      Activate
+    </Button>
+  ),
 }
 export const isLoading: Story = {
   args: {

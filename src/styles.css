@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "./css/colors.css";
-@import "./css/tokens.css";
+@import "css/tokens.colors.css";
 @import "./css/radix-theme.css";
 
 @plugin "@tailwindcss/forms";
@@ -17,7 +17,7 @@
   --color-cnt-on-inverse: var(--color-white-a12);
 
   --color-cnt-brand: var(--color-brand-11);
-  --color-cnt-brand-bold: var(--color-brand-9);;
+  --color-cnt-brand-bold: var(--color-brand-9);
 
   --color-cnt-accent: var(var(--color-accent-11),var(--color-brand-11));
   --color-cnt-accent-bold: var(var(--color-accent-9), var(--color-brand-9));
@@ -35,8 +35,8 @@
   --color-cnt-danger-bold: var(var(--color-danger-9), var(--color-accent-9));
 
   /* Backgrounds */
-  --color-main: oklch(1 0 0);
-  --color-inverse: var(--color-black-a12) /* white */;
+  --color-main: var(--bg-main);
+  --color-inverse: var(--color-black-a12); /* white */
   --color-secondary: var(--color-gray-3);
   --color-tertiary: var(--color-gray-4);
 
@@ -55,9 +55,9 @@
   --color-danger-bold: var(--color-danger-9);
 
   /* Borders */
-  --color-brd-line: #dcdcdc;
-  --color-brd-interactive: #dcdcdc;
-  --color-brd-ring: #c6c6c6;
+  --color-brd-line: var(--color-gray-5);
+  --color-brd-interactive: var(--color-gray-7);
+  --color-brd-ring: var(--color-gray-8);
 
   --color-brd-brand-line: var(--color-brand-6);
   --color-brd-brand-interactive: var(--color-brand-7);
@@ -84,7 +84,7 @@
   --color-brd-danger-ring: var(var(--color-danger-8), var(--color-red-500));
 
   /* Page Backgrounds */
-  --page: oklch(1 0 0);
-  --page-secondary: var(--color-gray-1);
-  --page-tertiary: var(--color-gray-2);
+  --color-page: var(--bg-page);
+  --color-page-secondary: var(--bg-page-secondary);
+  --color-page-tertiary: var(--bg-page-tertiary);
 }

@@ -3,6 +3,7 @@ import type { Preview } from '@storybook/react'
 import '../src/styles.css'
 import './globals.css'
 
+import { withThemeProvider } from './decorators/with-theme-provider'
 import { withThemes } from './decorators/with-themes'
 
 const preview: Preview = {
@@ -29,6 +30,6 @@ const preview: Preview = {
   },
 }
 
-export const decorators = [withThemes]
+export const decorators = [withThemes, withThemeProvider]
 
 export default preview

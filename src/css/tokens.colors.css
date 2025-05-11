@@ -5,19 +5,19 @@
   --cnt-tertiary: var(--color-gray-10);
   --cnt-on-inverse: var(--color-white-a12);
 
-  --cnt-accent: var(var(--color-accent-11),var(--color-brand-11));
+  --cnt-accent: var(var(--color-accent-11), var(--color-brand-11));
   --cnt-accent-bold: var(var(--color-accent-9), var(--color-brand-9));
 
-  --cnt-info: var(var(--color-info-11),var(--color-accent-11));
+  --cnt-info: var(var(--color-info-11), var(--color-accent-11));
   --cnt-info-bold: var(var(--color-info-9), var(--color-accent-9));
 
-  --cnt-warning: var(var(--color-warning-11),var(--color-accent-11));
+  --cnt-warning: var(var(--color-warning-11), var(--color-accent-11));
   --cnt-warning-bold: var(var(--color-warning-9), var(--color-accent-9));
 
-  --cnt-success: var(var(--color-success-11),var(--color-green-11),var(--color-emerald-700));
+  --cnt-success: var(var(--color-success-11), var(--color-green-11), var(--color-emerald-700));
   --cnt-success-bold: var(var(--color-success-9), var(--color-green-9), var(--color-emerald-500));
 
-  --cnt-danger: var(var(--color-danger-11),var(--color-accent-11));
+  --cnt-danger: var(var(--color-danger-11), var(--color-accent-11));
   --cnt-danger-bold: var(var(--color-danger-9), var(--color-accent-9));
 
   /* Backgrounds */
@@ -26,7 +26,8 @@
   --bg-secondary: var(--color-gray-3);
   --bg-tertiary: var(--color-gray-4);
 
-   --bg-accent-soft: var(--color-accent-3);
+
+  --bg-accent-soft: var(--color-accent-3);
   --bg-info-soft: var(--color-info-3);
   --bg-success-soft: var(--color-success-3);
   --bg-warning-soft: var(--color-warning-3);
@@ -39,9 +40,9 @@
   --bg-danger-bold: var(--color-danger-9);
 
   /* Borders */
-  --brd-line: #dcdcdc;
-  --brd-interactive: #dcdcdc;
-  --brd-ring: #c6c6c6;
+  --brd-line: var(--color-gray-5);
+  --brd-interactive: var(--color-gray-7);
+  --brd-ring: var(--color-gray-8);
 
   --brd-accent-line: var(var(--color-accent-6), var(--color-brand-6));
   --brd-accent-interactive: var(var(--color-accent-7), var(--color-brand-7));
@@ -64,9 +65,9 @@
   --brd-danger-ring: var(var(--color-danger-8), var(--color-red-500));
 
   /* Page Backgrounds */
-  --page: oklch(1 0 0);
-  --page-secondary: var(--color-gray-1);
-  --page-tertiary: var(--color-gray-2);
+  --bg-page: oklch(1 0 0);
+  --bg-page-secondary: var(--color-gray-1);
+  --bg-page-tertiary: var(--color-gray-2);
 
   /* -———————————————————————————————————————————- */
 
@@ -127,8 +128,10 @@
   /*--cnt-danger: #e00018;*/
 
   /* Backgrounds */
-  --bg-main: #ffffff;
-  --bg-alternative: #f6f6f8;
+  --bg-main: var(--color-gray-3);
+  --bg-secondary: var(--color-gray-4);
+  --bg-tertiary: var(--color-gray-2);
+  --bg-inverse: var(--color-white-a12);
 
   /*--bg-accent-soft: #f4ebff;*/
   /*--bg-info-soft: #ebf5ff;*/
@@ -168,8 +171,9 @@
   /*--brd-danger-ring: #e00018;*/
 
   /* Page Backgrounds */
-  --pagebg-main: #ffffff;
-  --pagebg-alternative: #f7f7f8;
+  --bg-page: #0B0B09;
+  --bg-page-secondary: var(--color-gray-1);
+  --bg-page-tertiary: var(--color-gray-2);
 
   /* -———————————————————————————————————————————- */
 
