@@ -8,12 +8,12 @@
  */
 
 :root {
-  /* Base control sizes - calibrated to match your screenshots */
-  --control-base-xs: 0.5rem;   /* Reference: XSmall normal inline padding */
-  --control-base-sm: 0.75rem;  /* Reference: Small normal inline padding */
-  --control-base-md: 0.75rem;  /* Reference: Medium normal inline padding */
-  --control-base-lg: 0.75rem;  /* Reference: Large normal inline padding */
-  --control-base-xl: 0.75rem;  /* Reference: XLarge normal inline padding */
+  /* Base control sizes - --spacing(<number>) == calc(0.25rem * <number>) */
+  --control-base-xs: 0.5rem;   /* reference-value: 0.5rem */
+  --control-base-sm: 0.75rem;  /* reference-value: 0.75rem */
+  --control-base-md: 0.75rem;  /* reference-value: 0.75rem */
+  --control-base-lg: 0.75rem;  /* reference-value: 0.75rem */
+  --control-base-xl: 0.75rem;  /* reference-value: 0.75rem */
 
   /* Density factors - proportional adjustments */
   --density-condensed: 0.5;   /* Creates tighter spacing */
@@ -54,39 +54,37 @@
   --control-size: var(--control-base-xs);
   --block-ratio: var(--block-ratio-xs);
   --line-ratio: var(--line-ratio-xs);
+  --control-gap: 0.25rem;
 }
 [data-control-size="sm"] {
   --control-size: var(--control-base-sm);
   --block-ratio: var(--block-ratio-sm);
   --line-ratio: var(--line-ratio-sm);
+  --control-gap: 0.25rem;
 }
 [data-control-size="md"] {
   --control-size: var(--control-base-md);
   --block-ratio: var(--block-ratio-md);
   --line-ratio: var(--line-ratio-md);
+  --control-gap: 0.5rem;
 }
 [data-control-size="lg"] {
   --control-size: var(--control-base-lg);
   --block-ratio: var(--block-ratio-lg);
   --line-ratio: var(--line-ratio-lg);
+  --control-gap: 0.5rem;
 }
 [data-control-size="xl"] {
   --control-size: var(--control-base-xl);
   --block-ratio: var(--block-ratio-xl);
   --line-ratio: var(--line-ratio-xl);
+  --control-gap: 0.5rem;
 }
 
 /* Density variations */
 [data-density="condensed"] { --density-factor: var(--density-condensed); }
 [data-density="normal"] { --density-factor: var(--density-normal); }
 [data-density="spacious"] { --density-factor: var(--density-spacious); }
-
-/* Example usage in components */
-.button {
-  padding-inline: var(--control-paddingInline);
-  padding-block: var(--control-paddingBlock);
-  line-height: var(--control-lineHeight);
-}
 
 /*
  * For browser compatibility (Edge/Safari), you can also generate flattened variables:

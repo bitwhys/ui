@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./css/colors.css";
-@import "css/tokens.colors.css";
+@import "./css/tokens.colors.css";
+@import "./css/tokens.controls.css";
 @import "./css/radix-theme.css";
 
 @plugin "@tailwindcss/forms";
